@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments :: head('Zero Ops Sample — Deploy OK')}"></head>
+<body class="bg-gray-50">
+
+<header class="bg-white border-b border-gray-200">
+    <div class="container mx-auto px-4 py-4">
+        <a href="/home" class="flex items-center space-x-2">
+            <svg th:replace="~{fragments :: logoIcon('text-coollabs', 32)}"></svg>
+            <span class="text-2xl font-bold text-gray-900">Zero Ops Sample</span>
+        </a>
+    </div>
+</header>
+
+<main class="container mx-auto px-4 py-20">
+    <div class="max-w-2xl mx-auto text-center">
+        <div class="inline-flex items-center justify-center w-16 h-16 bg-green-100 text-green-600 rounded-full mb-6">
+            <svg th:replace="~{fragments :: checkIcon('h-8 w-8')}"></svg>
+        </div>
+
+        <h1 class="text-4xl font-bold text-gray-900 mb-4">Deploy realizado com sucesso</h1>
+        <p class="text-lg text-gray-600 mb-8">
+            Se você está vendo esta página, o build e o deploy desta aplicação de exemplo via
+            <span class="text-coollabs font-medium">zero-ops</span> funcionaram de ponta a ponta.
+        </p>
+
+        <div class="bg-white rounded-lg border border-gray-200 shadow-sm p-6 text-left space-y-4 mb-8">
+            <div class="flex items-center justify-between">
+                <span class="text-sm text-gray-500">Servidor respondendo em</span>
+                <span class="font-mono text-sm text-gray-900" th:text="${#dates.format(#dates.createNow(), 'dd/MM/yyyy HH:mm:ss')}">-</span>
+            </div>
+            <div class="flex items-center justify-between">
+                <span class="text-sm text-gray-500">Endpoint de teste</span>
+                <a href="/api" class="font-mono text-sm text-coollabs hover:text-coollabs-200">GET /api</a>
+            </div>
+        </div>
+
+        <a href="/api" class="inline-flex items-center justify-center px-6 py-3 bg-coollabs hover:bg-coollabs-200 text-white rounded-lg transition-colors font-medium">
+            Testar /api
+        </a>
+    </div>
+</main>
+
+<footer class="border-t border-gray-200 py-6">
+    <div class="container mx-auto px-4 text-center text-sm text-gray-500">
+        zero-ops-sample-app
+    </div>
+</footer>
+
+</body>
+</html>
