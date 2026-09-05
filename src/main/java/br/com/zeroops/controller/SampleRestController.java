@@ -17,4 +17,11 @@ public class SampleRestController {
 
     }
 
+    @GetMapping("/v2/api")
+    public ResponseEntity<Status> indexV2() {
+
+        return ResponseEntity.ok(new Status("API is running with V2"));
+
+    }
+
 }
