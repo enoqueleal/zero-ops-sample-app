@@ -5,7 +5,7 @@
 
 <header class="bg-white border-b border-gray-200">
     <div class="container mx-auto px-4 py-4">
-        <a href="/home" class="flex items-center space-x-2">
+        <a th:href="@{/home}" class="flex items-center space-x-2">
             <svg th:replace="~{fragments :: logoIcon('text-coollabs', 32)}"></svg>
             <span class="text-2xl font-bold text-gray-900">Zero Ops Sample</span>
         </a>
@@ -31,11 +31,11 @@
             </div>
             <div class="flex items-center justify-between">
                 <span class="text-sm text-gray-500">Endpoint de teste</span>
-                <a href="/api" class="font-mono text-sm text-coollabs hover:text-coollabs-200">GET /api</a>
+                <a th:href="@{/api}" class="font-mono text-sm text-coollabs hover:text-coollabs-200">GET /api</a>
             </div>
         </div>
 
-        <a href="/api" class="inline-flex items-center justify-center px-6 py-3 bg-coollabs hover:bg-coollabs-200 text-white rounded-lg transition-colors font-medium">
+        <a th:href="@{/api}" class="inline-flex items-center justify-center px-6 py-3 bg-coollabs hover:bg-coollabs-200 text-white rounded-lg transition-colors font-medium">
             Testar /api
         </a>
     </div>
